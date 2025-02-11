@@ -1,0 +1,157 @@
+.attendance-container {
+  background: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.attendance-content {
+  flex: 1;
+  padding: 32px 50px;
+}
+
+.leave-request-section {
+  width: 100%;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #161e54;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.back-button i {
+  font-size: 20px;
+}
+
+.attendance-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #161e54;
+  line-height: 42px;
+  margin-bottom: 72px;
+}
+
+.attendance-options {
+  display: flex;
+  gap: 100px;
+  margin-left: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #e9374a;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.option-item:hover {
+  background-color: rgba(233, 55, 74, 0.1);
+}
+
+.option-item:focus {
+  outline: 2px solid #e9374a;
+  outline-offset: 2px;
+}
+
+.option-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  height: 60px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 4px;
+  padding: 10px 16px;
+  width: 343px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 24px 50px 24px 0;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #161e54;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 991px) {
+  .attendance-content {
+    padding: 20px;
+  }
+
+  .attendance-options {
+    margin-left: 10px;
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 343px;
+  }
+
+  .user-section {
+    padding-right: 20px;
+  }
+}
