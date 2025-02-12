@@ -1817,3 +1817,33 @@
   border: 1px solid #ffcccc;
   border-radius: 8px;
 }
+@media (max-width: 991px) {
+ 
+  .dashboard-desktop .frame-14,.text-wrapper-58 {
+    display: none;
+  }
+  .dashboard-desktop .talent-request {
+    height: 133px;
+    width: 90%;
+    top: 160px;
+  }
+  .dashboard-desktop .totala-employees {
+    height: 133px;
+    width: 90%;
+    top: 160px;
+
+  }
+  .dashboard-desktop .announcement{
+    top: 188px;
+  }
+  .dashboard-desktop .frame-7,.dashboard-desktop .frame-10,.dashboard-desktop .frame-11,.dashboard-desktop .frame-12,.dashboard-desktop .listing-cards, .dashboard-desktop .listing-cards-2 {
+    width: 80%;
+  }
+  .dashboard-desktop .group {
+    height: 330px ;
+    left: -58px;
+    position: absolute;
+    top: 1520px;
+    width: 454px;
+}
+}

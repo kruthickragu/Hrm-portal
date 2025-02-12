@@ -339,7 +339,7 @@ select:focus {
   }
 
   .stat-card {
-    min-width: 100%;
+    width: 80%;
   }
 }
 

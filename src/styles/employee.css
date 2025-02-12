@@ -206,3 +206,11 @@
     padding: 20px;
   }
 }
+@media (max-width: 768px) {
+  .employee-container{
+    display: block;
+  }
+  .main-content{
+    min-height: 0;
+  }
+}

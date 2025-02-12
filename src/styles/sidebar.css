@@ -1,14 +1,20 @@
+/* Sidebar Default (Visible on Desktop) */
 .sidebar {
   width: 280px;
   min-width: 280px;
   background: #ffffff;
   border-right: 1px solid #f1f1f1;
   height: 100vh;
+  top: 0;
+  left: 0; /* Show sidebar by default on desktop */
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
+/* Sidebar Content */
 .sidebar-content {
-  position: fixed;
-  width: 280px;
+  width: 100%;
   height: 100vh;
   padding: 20px 0;
   display: flex;
@@ -16,15 +22,17 @@
   background: #ffffff;
 }
 
+/* Logo */
 .logo {
   padding: 10px 30px;
   font-family: "Poppins", sans-serif;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 600;
   color: #000000;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
+/* Navigation */
 .nav-section {
   flex: 1;
   padding: 0 20px;
@@ -39,9 +47,9 @@
 .nav-item {
   display: flex;
   align-items: center;
-  padding: 16px 20px;
-  gap: 24px;
-  border-radius: 8px;
+  padding: 14px 20px;
+  gap: 18px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -61,11 +69,12 @@
 }
 
 .nav-icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
+/* Other Section */
 .other-section {
   padding: 20px;
 }
@@ -79,11 +88,54 @@
   opacity: 0.5;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 12px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+}
+
+.hamburger-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Mobile View: Hide Sidebar */
 @media (max-width: 991px) {
   .sidebar {
+    left: -280px; /* Hide sidebar on mobile */
+  }
+
+  .sidebar.open {
+    left: 0; /* Show when toggled */
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .dashboard-desktop .group {
+    height: 330px ;
+    left: -58px;
+    position: absolute;
+    top: 1600px;
+    width: 454px;
+}
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
     width: 100%;
-    height: auto;
-    min-width: auto;
+    left: -100%;
+    height: 100vh;
+  }
+
+  .sidebar.open {
+    left: 0;
   }
 
   .sidebar-content {
